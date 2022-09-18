@@ -33,20 +33,38 @@ function playRound(playerSelect, compSelect) {
     }
 }
 
-function game() {
+function game(playerSelect) {
     let random_number;
     let min = 1;
     let max = 3;
-    let playerSelect;
+    //let playerSelect;
     let compSelect;
-    for (let i = 0; i < 5; i++) {
-        random_number = Math.floor(Math.random() * (max - min + 1)) + min;
-        compSelect = (getComputerChoice(random_number));
-        playerSelect = prompt("What do you choose?");
-        console.log(playRound(playerSelect, compSelect));
-    }
+
+    random_number = Math.floor(Math.random() * (max - min + 1)) + min;
+    compSelect = (getComputerChoice(random_number));
+    //playerSelect = prompt("What do you choose?");
+    console.log(playRound(playerSelect, compSelect));
+
 }
 
-game(); 
+const rock_btn = document.querySelector('#rbtn');
+rock_btn.addEventListener('click', () => {
+    playerSelect = "Rock";
+    game(playerSelect);
+});
+
+const paper_btn = document.querySelector('#pbtn');
+paper_btn.addEventListener('click', () => {
+    playerSelect = "Paper";
+    game(playerSelect);
+});
+
+const sci_btn = document.querySelector('#sbtn');
+sci_btn.addEventListener('click', () => {
+    playerSelect = "Scissors";
+    game(playerSelect);
+});
+
+//game();
 
 

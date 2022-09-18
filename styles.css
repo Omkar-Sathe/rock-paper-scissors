@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.buttons-panel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rock {
+    background-color: gray;
+    padding: 5px;
+    margin: 10px;
+}
+
+.paper {
+    background-color: antiquewhite;
+    padding: 5px;
+    margin: 10px;
+}
+
+.scissors {
+    background-color: cadetblue;
+    padding: 5px;
+    margin: 10px;
+}
